@@ -1,0 +1,250 @@
+JavaExercise4
+Recursion
+
+1.// printing 1 to N
+class Solution
+{
+    
+  public void printNos(int N)
+    {
+        
+        if(N==0)
+        return;
+        
+        else
+        printNos(N-1);
+        System.out.print(N + " ");
+    }
+}
+
+2. // Factorial using recursion
+
+class Solution
+{
+    // complete the function
+    // N: input element
+    static int factorial(int N)
+    {
+        // find and return the factorial of N
+        if(N==0 || N==1)
+        return 1 ; 
+        
+        else
+        return N* factorial(N-1);
+    }
+}
+
+3. // count total digits in a number
+class Solution
+{
+    // complete the below function
+    public static int countDigits(int n)
+    {
+        
+        if(n<10)
+        return 1; 
+        else{
+            return countDigits(n/10) + 1;
+        }
+    }
+}
+
+4. // sum of digits of a number
+class Solution
+{
+    // complete the function
+    public static int sumOfDigits(int n)
+    {
+        
+        if(n<10)
+        return n;  
+        
+        else
+        return n%10 + sumOfDigits(n/10);
+    }
+}
+
+5. // recursively sum N numbers
+
+class Solution
+{
+    // Complete the function
+    // N: input element
+    public static int recursiveSum(int N)
+    {
+        // recursively sum from 1 to N
+        if(N==0)
+        return 0;
+        else
+        return N+recursiveSum(N-1);
+    }
+}
+
+6. // fibonacci using recursion
+
+class Solution
+{
+    static int fibonacci(int n)
+    {
+        
+        if(n==1 || n==2)
+        return 1;
+        
+        else
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+}
+
+7. // The sequence
+class Sequence
+{
+    // N: input element 
+    public static int theSequence(int N)
+    {
+        
+        
+        if(N==0)
+        return 1; 
+        
+        else
+        return N+N*theSequence(N-1);
+    }
+
+}
+
+8. //finding nCr
+
+class Get
+{
+    public static int nCr(int n,int r)
+    {
+        
+       
+        if(n==r || r==0)
+        return 1; 
+        
+        else
+        return nCr(n-1,r-1) + nCr(n-1,r);
+        
+        
+    }
+}
+
+9. // finding palindrome
+
+class Solution
+{
+    // Complete the function
+    // N: input element
+    
+    static boolean helper(String str, int start, int end){
+        
+        if(start>=end)
+        return true;
+        
+        return ((str.charAt(start)==str.charAt(end))&& helper(str, start+1, end-1));
+        
+    }
+    static boolean isPalin(int N)
+    {
+        // Check if the number is palindrome or not
+        
+        
+        String str = Integer.toString(N);
+        
+        
+        return helper(str,0,str.length() -1);
+    }
+}
+
+10. // find GCD
+
+class Solution
+{
+    // Complete the function
+    // a: first number
+    // b: second number
+    public static int GCD(int a, int b)
+    {
+        // find and return GCD of two numbers;
+        
+        
+        
+        if(a==b)
+        return a;
+        
+         if(a%b==0)
+        return b;
+        if(b%a==0)
+        return a; 
+        
+        
+        if(a<b)
+        return GCD(a,b%a);
+        
+        else
+        return GCD(a%b,b);
+        
+    }
+}
+
+11. // print array elements using recursion
+
+class Solution
+{
+    // Complete the function
+    // arr[]: input array
+    // n: size of inout array
+    public static void printArrayRecursively(int arr[], int n)
+    {
+        // Print the array elements recursively
+        if(n==0)
+        return; 
+        
+        else
+        printArrayRecursively(arr,n-1);
+        System.out.print(arr[n-1] + " ");
+    }
+}
+
+12. // Tower of hanoi
+
+class Hanoi {
+
+    public long toh(int N, int from, int to, int aux) {
+        
+        
+        if(N==0)
+        return 0;
+        
+        if(N<0)
+        return -1;
+        int res = max (toh(N-from,from,to,aux), toh(N-to,from , to ,aux), toh(N-aux,from,to,aux));
+        
+        if(res <0)
+        return -1;
+        
+        else
+        return res+1;
+        
+    }
+}
+
+13. // power using recursion
+class Solution
+{
+    static int RecursivePower(int n,int p)
+    {
+        // add your code here
+        
+        if(n==0)
+        return 0; 
+        
+        if(p==0)
+        return 1;
+        
+        return n* RecursivePower(n,p-1);
+        
+    }
+ 
+}
