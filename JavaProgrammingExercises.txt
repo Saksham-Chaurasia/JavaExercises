@@ -1,0 +1,226 @@
+1.
+
+class Geeks{
+    
+    // Function to print hello
+    static void printHello(){
+        
+        // Your code here
+        System.out.println("Hello World");
+        
+    }
+    
+}
+
+2.
+
+class Geeks{
+    
+    // Function to print each word in single line
+    static void printIndividualLine(){
+        
+        // Your code here
+        System.out.println("Geeks");
+        System.out.println("for");
+        System.out.println("Geeks");
+        
+    }
+    
+}
+
+3.
+
+class Geeks{
+    
+    // Function to print a and c
+    //comment the line that outputs b
+    static void comment(int a, int b, int c){
+        
+        //Prints a
+        System.out.println(a);
+        //Prints b
+       // System.out.println(b);
+        //Prints c
+        System.out.println(c);
+    }
+    
+}
+
+4.
+
+class Geeks{
+    
+    // Function to do operations with different data types
+    static void dataTypes(int a, float b, double c, long l, byte d){
+        
+        double p = c/b ;//c/b
+        double q = b/a;//b/a
+        double r = c/a;//c/a
+        double m = r+l;//r+l
+        int s =a/d ;//a/d
+        
+        //Printing all the results 
+        System.out.println(p + " " + q + " " + r + " " + m + " " + s);
+        
+        
+        
+    }
+}
+
+5.
+
+class Geeks{
+    
+    static void printInFormat(float a, float b){
+        float result = a/b;
+        System.out.print(result + " ");
+        System.out.format("%.3f ", result);
+        
+        // Your code here to print upto 3 decimal places
+        
+    }    
+    
+}
+
+6.
+//odd even counting 
+class Geeks {
+    static void countOddEven(int a[], int n) {
+
+       
+        
+        int c =0;
+        for (int i =0; i<n; i++){
+            
+           if(a[i]%2==0)
+           c++;
+           
+          
+           
+        }
+        
+        System.out.print((n -c) + " "+ c);
+        
+        
+    }
+}
+
+7.// matrix interchange
+
+class Geeks{
+    
+    static void interchange(int a[][],int r, int c){
+        
+        for(int i=0; i<r; i++){
+          int temp = a[i][0] ;
+          a[i][0] = a[i][c-1];
+          a[i][c-1] = temp;
+        }
+        
+        
+        
+        for(int i = 0;i<r;i++){
+            for(int j = 0; j<c;j++){
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        } 
+    }
+}
+
+8. // predict the column with maximum number of 0s 2D array
+class Geeks{
+    
+    static int columnWithMaxZero(int a[][],int n){
+        
+       
+        int result =0;
+        int max = 0;
+        for (int i =0; i<n; i++){
+           
+            int cnt=0;
+            for(int j =0; j<n; j++){
+                if(a[j][i]==0)
+                cnt++;
+                
+            }
+            
+           if(cnt> max){
+              
+               max = cnt;
+               result = i;
+           }
+        }
+        return result;
+        
+        
+    }
+}
+
+9. //Maximum Area Rectangle
+
+class maxArea{
+    
+    static int calculate_Area(Rectangle arr[]){
+        
+        
+        int max_area =Integer.MIN_VALUE;
+        for(int i=0; i<arr.length; i++){
+            max_area = Math.max(max_area, arr[i].breadth*arr[i].length);
+        }
+        return max_area;
+        
+    }
+    
+}
+
+10. //logical operators 
+class Geeks{
+    
+    static void logicOp(boolean a, boolean b){
+        /*output (a&&b), (a||b), and ((!a)&&(!b))separated by spaces*/
+        System.out.print((a&&b) + " ");
+        System.out.print((a||b) + " ");
+        System.out.print((!a)&&(!b));
+    }
+}
+
+11. // while loop printing in a reverse order printing n's table
+
+class Geeks {
+	 static void printTable (int n) 
+	 {
+            int multiplier=10;
+            while(multiplier>0)
+            {
+                
+                System.out.print(multiplier*n + " ");
+                multiplier--;
+            }
+       System.out.println();
+	 }
+
+}
+
+
+12.// if else 
+class Geeks {
+	 static void isDivisibleByPrime (int n) 
+	 {
+             
+             if(n%11==0){
+                 System.out.println("Eleven");
+             }
+             else if(n%3==0){
+                 System.out.println("Three");
+             }
+             else if(n%2==0 ){
+                 System.out.println("Two");
+             }
+            
+             
+             else
+       System.out.println("-1");
+	 }
+
+}
