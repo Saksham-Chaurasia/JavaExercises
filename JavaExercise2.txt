@@ -1,0 +1,186 @@
+JavaExercise2 
+
+1.//Swap two numbers
+
+class Solution
+{
+    public void utility(int a, int b){
+        //code here
+        
+        int temp = a;
+        a = b; 
+        b = temp; 
+        
+        
+        System.out.println(a+" "+b);
+    }
+}
+
+2.// sum of n numbers
+
+public static int nSum(int n){
+    int ans = 0;
+
+    
+    
+    while(n!=0){
+        ans = ans+n;
+        n--;
+    }
+    
+    return ans;
+}
+
+3.// last digit of a number
+
+public static void utility(int n){
+
+    //just complete below statement
+    int ans = Math.abs(n%10);
+
+    //below statement print the result
+    System.out.println(ans);
+}
+
+4. // Ap term
+public static void utility(int a, int d, int n){
+    
+    int ans = a + (n-1) * d; 
+    System.out.println(ans);
+}
+
+5. //fibonacci
+class Solution
+{
+    static int fibonacci(int n)
+    {
+        
+        if(n==1 || n==2)
+        return 1;
+        
+        else
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+}
+
+6. //search an element in an array
+
+class Solution{
+        
+    static int search(int arr[], int N, int X)
+    {
+        
+        
+        for(int i =0; i<N; i++){
+            if(arr[i]==X)
+            return i;
+        }
+        
+        return -1;
+        
+        
+    }
+    
+}
+
+7. class Insert
+{
+    //insert the given element at 
+    // the end, i.e., at index sizeOfArray - 1. You may 
+    // assume that the array already has sizeOfArray - 1
+    // elements. 
+    public void insertAtEnd(int arr[],int sizeOfArray,int element)
+    {
+       
+        arr[sizeOfArray-1] = element;
+        
+    }
+}
+
+8. class Solution
+{
+    // insert the given element at the given index. 
+    // After inserting the elements at index, elements
+    // from index onward should be shifted one position ahead
+    // You may assume that the array already has sizeOfArray - 1
+    // elements.
+    public void insertAtIndex(int arr[],int sizeOfArray,int index,int element)
+    {
+        //Your code here, Geeks
+        
+        
+        for(int i = sizeOfArray-1; i>index; i--){
+           arr[i] = arr[i-1];
+        }
+        arr[index] = element;
+        
+    }
+
+
+}
+
+9. // get element at particular index
+class Get
+{
+    public static int getByIndex(int arr[], int n, int i)
+    {
+        
+        if(i<n)
+        return arr[i];
+        
+        else
+        return -1;
+        
+    }
+}
+
+10. class UpdateArray
+{
+    // Complete the function
+    // arr[]: input array
+    // index: input  index
+    // element: element to be updated
+    public static void updateArray(int arr[], int index, int element)
+    {
+        // Update the element at index
+        for(int i =0; i<index; i++){
+            arr[i] = arr[i+1];
+        }
+        
+        arr[index] =element;
+    }
+}
+
+11. // delete and shift the array
+
+class Solution
+{
+    
+    public static void deleteFromArray(int arr[], int n, int index)
+    {
+       
+        for(int i =index; i<n-1; i++){
+            arr[i] = arr[i+1];
+        }
+        
+        arr[n-1] =0;
+    }
+}
+
+12. // count smaller than x
+class Solution
+{
+    public static int smallerThanX(int arr[], int n, int x)
+    {
+        // Your code here
+        int count =0; 
+        for(int i=0; i<n; i++){
+            if(arr[i]<x)
+            count++;
+        }
+        
+        return count; 
+    }
+}
+
+
